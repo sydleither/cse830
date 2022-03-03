@@ -23,7 +23,7 @@ int main()
     cout << "n,binary_tree,hash_table" << endl;
 
     //https://stackoverflow.com/questions/22387586/measuring-execution-time-of-a-function-in-c
-    for(int n = 50000; n <= 3000000; n+=50000){
+    for(int n = 50000; n <= 4000000; n+=50000){
         pair<int, int>* multimap_input = new pair<int, int>[n];
         int* multiset_input = new int[n];
         
