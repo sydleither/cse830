@@ -15,9 +15,6 @@ int main()
     using chrono::duration;
     using chrono::milliseconds;
 
-    multimap<int, int> bin_tree;
-    unordered_multiset<int> hash_table;
-
     //https://stackoverflow.com/questions/13445688/how-to-generate-a-random-number-in-c
     random_device dev;
     mt19937 rng(dev());
@@ -29,6 +26,9 @@ int main()
     for(int n = 50000; n <= 3000000; n+=50000){
         pair<int, int>* multimap_input = new pair<int, int>[n];
         int* multiset_input = new int[n];
+        
+        multimap<int, int> bin_tree;
+        unordered_multiset<int> hash_table;
 
         for(int i = 0; i < n; i++){
             multimap_input[i] = pair<int, int>(dist(rng), dist(rng));
